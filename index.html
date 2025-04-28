@@ -13,6 +13,7 @@ body,*{
 }
 body{
     width: 100%;
+    min-height: 100%;
   
 
 }
@@ -132,8 +133,25 @@ a:hover{
 
 a:active{
     background-color: aqua;
-    border-color: black aqua aqua black;dark
+    border-color: black aqua aqua black;
 
+}
+
+
+.cuadroDialogo{
+    position:fixed;
+    display:none;
+    background-color: grey;
+    margin-left:30vw;
+    
+    margin-top:10vh;
+ 
+    min-width:fit-content;
+    width:30vw;
+    height: 30vh;
+    min-height: fit-content;
+    padding-inline:5vh;
+    padding-block: 5vw;
 }
 
 
@@ -144,12 +162,27 @@ a:active{
 var sistemas;
 var instalaciones;
 var SisShow;
-var InstShow
+var InstShow;
+var Linkeador;
+var conttrsnn;
+var ssspppp;
+var cuadroD;
+
+const a1="pbox.com/reque";
+const a2="https://www.dro";
+const a3="st/Xenu5NnqO35R1vSJxCum";
+
 
 window.addEventListener("load", (event) => {
   
  sistemas= document.getElementById("Sistemas");
  instalaciones= document.getElementById("Instalaciones");
+ Linkeador = document.getElementById("ssllnkk");
+ conttrsnn = document.getElementById("lnnkkaccpt");
+ ssspppp = document.getElementById("ssspppaaa");
+cuadroD = document.getElementById("cuadroDD");
+
+
 
   SisShow= document.getElementById("SistemasShow");
  InstShow= document.getElementById("InstalacionesShow");
@@ -172,12 +205,47 @@ window.addEventListener("load", (event) => {
     instalaciones.style.backgroundColor="midnightblue";
 });
 
+Linkeador.addEventListener("click",(event)=>{
+
+    
+    
+    cuadroDD.style.display="block";
+
+
+    
+
+});
+
+
+conttrsnn.addEventListener("click",(event)=>{
+ 
+
+if("eta"+ssspppp.value+"rrkk"=="eta333Arrkk"){
+
+llnnkkk=a2;
+    llnnkkk=llnnkkk+a1;
+    window.location.href=llnnkkk+a3;
+    llnnkkk="";
+}
+
+cuadroDD.style.display="none";
+
+});
+
+
 });
 
 </script>
 
 </head>
 <body>
+
+
+    
+
+
+
+
 <header>
     <div class="titulo">
         <h1>Educación Técnica</h1>
@@ -187,6 +255,7 @@ window.addEventListener("load", (event) => {
         <button id="Instalaciones">Instalaciones y Aplicaciones de la Energía</button>
     </div>
 </header>
+
 
 
 
@@ -213,7 +282,7 @@ window.addEventListener("load", (event) => {
             <br>
             <h3>Subir Archivo</h3>
             <p>
-                <a href="https://www.dropbox.com/request/Xenu5NnqO35R1vSJxCum">Subir Archivo</a>
+                <a id="ssllnkk">Subir Archivo</a>
             </p>
 
              
@@ -258,13 +327,17 @@ window.addEventListener("load", (event) => {
         </div>
     </div>
 
-    </div>
+ </div>
 
+
+
+ 
+ 
 
     <div id="InstalacionesShow" class="showroom" style="display:none;">
-    <div class="cuadro"><div class="texto"><h1>Instalaciones y Aplicaciones de la Energía</h1></div></div>
-    <div class="cuadro"><img src="./Instalaciones/images/neumatica.PNG" ></div>
-     <div class="cuadro"><div class="texto">
+        <div class="cuadro"><div class="texto"><h1>Instalaciones y Aplicaciones de la Energía</h1></div></div>
+        <div class="cuadro"><img src="./Instalaciones/images/neumatica.PNG" ></div>
+        <div class="cuadro"><div class="texto">
          <p><a href="./Instalaciones/PREGUNTAS DE INSTALACIONES Y APLICACIONES DE LA ENERGÍA 5TO.docx">Descargar Preguntas</a></p>
          <p><a href="./Instalaciones/Neumatica-4.pdf">Apunte de neumática</a></p>
          <p><a href="./Instalaciones/Neumática Completo.pdf">Neumática2</a></p>
@@ -272,18 +345,33 @@ window.addEventListener("load", (event) => {
          <p><a href="./Instalaciones/Castelló;Barrera;Pérez - Redes de distribución de aire comprimido y dimensionamiento del compresor.pdf">Cañería</a></p>
          <p><a href="./Instalaciones/Hidráulica.pdf">Hidráulica</a></p>
      
-     </div></div>
+        </div>
+        </div>
+
+        <div class="cuadro"><div class="texto"><br><br><br></div></div>
+    
+    </div>
 
 
    
+    <div class="cuadroDialogo" id="cuadroDD">
+        <br>
+        <p>Inserte contraseña:</p>
+        <br>
+        <input type="text" id="ssspppaaa" autocomplete="off">
+        <br>
+        <button id="lnnkkaccpt">Aceptar</button>
+    
+    
+    </div>
+   
+
+
 
     
 
-
-    <div class="cuadro"><div class="texto"><br><br><br></div></div>
-
-
-
+   
+    
 
 
 
