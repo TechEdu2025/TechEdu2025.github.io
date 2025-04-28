@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+<title> Eduación Técnica</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <style>
@@ -25,15 +25,33 @@ header{
     height: 20vh;
     width: 100%; ;
     min-height: 80px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+   justify-items: center;
 }
 
 .titulo{
 width: 50%;    
 text-align: center;
+align-self: center;
+
+
+}
+
+.botones{
+   align-self:last baseline
+
+}
+
+.botones button{
+
+    font-size: large;
+    font-weight: bold;
+    background-color: darkslategrey ;
+    padding: 5px;
+    border-radius: 5px;
+
 
 }
 
@@ -78,6 +96,10 @@ text-align: center;
     
 }
 
+.texto p{
+    margin: 20px;
+}
+
 .imagen{
     width: 170px;
     
@@ -86,11 +108,59 @@ text-align: center;
     width: 100%;
 }
 
+a{
+    padding:5px;
+    background-color: orange;
+    text-decoration: none;
+    color:blue;
+    border-style: solid;
+    border-color: orange black black orange;
+    border-radius: 5px;
+}
+a:hover{
+    background-color: yellow;
+}
 
+a:active{
+    background-color: aqua;
+    border-color: black aqua aqua black;
+
+}
 
 
 </style>
 
+<script>
+
+var sistemas;
+var instalaciones;
+var SisShow;
+var InstShow
+
+window.addEventListener("load", (event) => {
+  
+ sistemas= document.getElementById("Sistemas");
+ instalaciones= document.getElementById("Instalaciones");
+
+  SisShow= document.getElementById("SistemasShow");
+ InstShow= document.getElementById("InstalacionesShow");
+
+  
+ sistemas.addEventListener("click",(event)=>{
+
+    SisShow.style.display='';
+    InstShow.style.display='none';
+ });
+
+ instalaciones.addEventListener("click",(event)=>{
+
+    SisShow.style.display='none';
+    InstShow.style.display='';
+});
+
+});
+
+</script>
 
 </head>
 <body>
@@ -98,8 +168,15 @@ text-align: center;
     <div class="titulo">
         <h1>Educación Técnica</h1>
     </div>
+    <div class="botones">
+        <button id="Sistemas">Sitemas Tecnológicos</button>
+        <button id="Instalaciones">Instalaciones y Aplicaciones de la Energía</button>
+    </div>
 </header>
-<div class="showroom">
+
+
+
+<div id="SistemasShow" class="showroom" >
     <div class="cuadro"><div class="texto"><h1>Sistemas Tecnológicos</h1></div></div>
     <div class="cuadro">
         <div class="texto">
@@ -167,9 +244,10 @@ text-align: center;
         </div>
     </div>
 
+    </div>
 
 
-
+    <div id="InstalacionesShow" class="showroom" style="display:none;">
     <div class="cuadro"><div class="texto"><h1>Instalaciones y Aplicaciones de la Energía</h1></div></div>
     <div class="cuadro"><img src="./Instalaciones/images/neumatica.PNG" ></div>
      <div class="cuadro"><div class="texto">
@@ -184,10 +262,17 @@ text-align: center;
 
 
    
+
+    
+
+
     <div class="cuadro"><div class="texto"><br><br><br></div></div>
 
 
-</div>
+
+
+
+
 
 
 
