@@ -22,12 +22,12 @@ header{
     padding:0;
     background-color: darkslategrey;
     color: wheat;
-    height: 20vh;
+    min-height: 20vh;
     width: 100%; ;
-    min-height: 80px;
+   
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows: 80% 20%;
+    grid-template-rows:auto max-content;
    justify-items: center;
 }
 
@@ -44,15 +44,22 @@ align-self: center;
 
 }
 
+
+
 .botones button{
 
     font-size: large;
     font-weight: bold;
-    background-color: darkslategrey ;
+    background-color: darkslategrey  ;
     padding: 5px;
     border-radius: 5px;
+    text-underline-offset: 20px;
+    color:burlywood;
+    
+}
 
-
+.botones button:hover{
+    background-color:rgb(27, 26, 26) ;
 }
 
 .showroom{
@@ -64,7 +71,7 @@ align-self: center;
     min-height: 80vh;
 
    flex-direction: column;
-   background-color:lightblue;
+   background-color:rgb(132, 164, 175);
     align-items:center;
 }
 
@@ -110,20 +117,22 @@ align-self: center;
 
 a{
     padding:5px;
-    background-color: orange;
+    background-color:sandybrown;
     text-decoration: none;
-    color:blue;
+    color:black;
     border-style: solid;
-    border-color: orange black black orange;
+    border-color: sandybrown black black sandybrown;
     border-radius: 5px;
+    max-width: fit-content;
+    display: inline-block;
 }
 a:hover{
-    background-color: yellow;
+    background-color:rgb(232, 210, 182);
 }
 
 a:active{
     background-color: aqua;
-    border-color: black aqua aqua black;
+    border-color: black aqua aqua black;dark
 
 }
 
@@ -145,17 +154,22 @@ window.addEventListener("load", (event) => {
   SisShow= document.getElementById("SistemasShow");
  InstShow= document.getElementById("InstalacionesShow");
 
+ sistemas.style.backgroundColor="midnightblue" ;
   
  sistemas.addEventListener("click",(event)=>{
 
     SisShow.style.display='';
     InstShow.style.display='none';
+    sistemas.style.backgroundColor="midnightblue" ;
+    instalaciones.style='button';
  });
 
  instalaciones.addEventListener("click",(event)=>{
 
     SisShow.style.display='none';
     InstShow.style.display='';
+    sistemas.style='button';
+    instalaciones.style.backgroundColor="midnightblue";
 });
 
 });
