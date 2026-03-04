@@ -202,7 +202,7 @@ cuadroD = document.getElementById("cuadroDD");
 
   SisShow= document.getElementById("SistemasShow");
   InstShow= document.getElementById("InstalacionesShow");
-  ElecShow= document.getElementById("ElectotecniaShow");
+  ElecShow= document.getElementById("ElectrotecniaShow");
 
  sistemas.style.backgroundColor="midnightblue" ;
   
@@ -213,24 +213,27 @@ cuadroD = document.getElementById("cuadroDD");
     ElecShow.style.display='none';
     sistemas.style.backgroundColor="midnightblue" ;
     instalaciones.style='button';
+    electrotecnia.style='button';
  });
 
  instalaciones.addEventListener("click",(event)=>{
 
-    SisShow.style.display='none';
-    InstShow.style.display='';
-    ElecShow.style.display='none';
+    SisShow.style.display="none";
+    InstShow.style.display="";
+    ElecShow.style.display="none";
     sistemas.style='button';
     instalaciones.style.backgroundColor="midnightblue";
+    electrotecnia.style='button';
 });
 
-    electrotecnia.addEventListener("click",(event)=>{
+electrotecnia.addEventListener("click",(event)=>{
 
-    SisShow.style.display='none';
-    InstShow.style.display='none';
-    ElecShow.style.display='';
-    sistemas.style='button';
-    instalaciones.style.backgroundColor="midnightblue";
+    SisShow.style.display="none";
+    InstShow.style.display="none";
+    ElecShow.style.display="";
+    sistemas.style="button";
+    instalaciones.style="button";
+    electrotecnia.style.backgroundColor="midnightblue";
 });
 
 Linkeador.addEventListener("click",(event)=>{
@@ -530,7 +533,7 @@ cuadroDD.style.display="none";
 
 
      <div id="ElectrotecniaShow" class="showroom" style="display:none;">
-        <div class="cuadro"><div class="texto"><h1>Electrotecnia</h1></div>
+        <div class="cuadro"><div class="texto"><h1>Electrotecnia</h1></div></div>
         <div class="cuadro"><img src="./Electrotecnia/images/elementosCircuito.jpg" ></div>
         <div class="cuadro"><div class="texto">
             <h3>Youtube: Profesor Sergio Llanos:</h3>
@@ -547,8 +550,8 @@ cuadroDD.style.display="none";
 
             
     
-     
-        </div>
+            
+        </div></div>
     </div>
         
 
@@ -582,5 +585,4 @@ cuadroDD.style.display="none";
 </body>
 
 </html>
-
 
