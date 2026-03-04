@@ -163,6 +163,10 @@ a:active{
    margin:5px;
 }
 
+.bordesOff{
+    display:none;
+}
+
 
 </style>
 
@@ -170,8 +174,10 @@ a:active{
 
 var sistemas;
 var instalaciones;
+var electrotecnia
 var SisShow;
 var InstShow;
+var ElecShow;
 var Linkeador;
 var conttrsnn;
 var ssspppp;
@@ -186,6 +192,7 @@ window.addEventListener("load", (event) => {
   
  sistemas= document.getElementById("Sistemas");
  instalaciones= document.getElementById("Instalaciones");
+ electrotecnia= document.getElementById("Electrotecnia");
  Linkeador = document.getElementById("ssllnkk");
  conttrsnn = document.getElementById("lnnkkaccpt");
  ssspppp = document.getElementById("ssspppaaa");
@@ -194,7 +201,8 @@ cuadroD = document.getElementById("cuadroDD");
 
 
   SisShow= document.getElementById("SistemasShow");
- InstShow= document.getElementById("InstalacionesShow");
+  InstShow= document.getElementById("InstalacionesShow");
+  ElecShow= document.getElementById("ElectotecniaShow");
 
  sistemas.style.backgroundColor="midnightblue" ;
   
@@ -202,6 +210,7 @@ cuadroD = document.getElementById("cuadroDD");
 
     SisShow.style.display='';
     InstShow.style.display='none';
+    ElecShow.style.display='none';
     sistemas.style.backgroundColor="midnightblue" ;
     instalaciones.style='button';
  });
@@ -210,6 +219,16 @@ cuadroD = document.getElementById("cuadroDD");
 
     SisShow.style.display='none';
     InstShow.style.display='';
+    ElecShow.style.display='none';
+    sistemas.style='button';
+    instalaciones.style.backgroundColor="midnightblue";
+});
+
+    electrotecnia.addEventListener("click",(event)=>{
+
+    SisShow.style.display='none';
+    InstShow.style.display='none';
+    ElecShow.style.display='';
     sistemas.style='button';
     instalaciones.style.backgroundColor="midnightblue";
 });
@@ -229,7 +248,7 @@ Linkeador.addEventListener("click",(event)=>{
 conttrsnn.addEventListener("click",(event)=>{
  
 
-if("eta"+ssspppp.value+"rrkk"=="eta333Arrkk"){
+if("eta"+ssspppp.value+"rrkk"=="eta444Zrrkk"){
 
 llnnkkk=a2;
     llnnkkk=llnnkkk+a1;
@@ -262,6 +281,7 @@ cuadroDD.style.display="none";
     <div class="botones">
         <button id="Sistemas">Sistemas Tecnológicos</button>
         <button id="Instalaciones">Instalaciones y Aplicaciones de la Energía</button>
+        <button id="Instalaciones">Electrotecnia</button>
     </div>
 </header>
 
@@ -410,7 +430,7 @@ cuadroDD.style.display="none";
 
             
               <br>
-            <div class="bordesOn">
+            <div class="bordesOff">
             <h3>Descargar Proyecto 20/05/2025:</h3>
             <p >
                 <a href="./SistemasTecnologicos/20250520/(3) lucia herrera cietto CIETTO.docx">(3) lucia herrera cietto CIETTO.docx</a>
@@ -437,7 +457,7 @@ cuadroDD.style.display="none";
             </div>
 
             <br>
-            <div class="bordesOn">
+            <div class="bordesOff">
             <h3>Descargar Proyecto 29/04/2025:</h3>
             <p >
                 <a href="./SistemasTecnologicos/0429/Ana Bellu.docx">Ana Bellu.docx</a>
@@ -456,7 +476,7 @@ cuadroDD.style.display="none";
             </div>
 
             <br>
-            <div class="bordesOn">
+            <div class="bordesOff">
             <h3>Descargar Proyecto 15/04/2025:</h3>
             <p>                <a href="./SistemasTecnologicos/Archivos0415/angeles dentone proyecto arduino angeles Dentone.docx">angeles dentone proyecto arduino angeles Dentone.docx</a>
                            <a href="./SistemasTecnologicos/Archivos0415/modelo (1) Oliver.docx">modelo (1) Oliver.docx</a>
@@ -509,6 +529,31 @@ cuadroDD.style.display="none";
     </div>
 
 
+     <div id="ElectrotecniaShow" class="showroom" style="display:none;">
+        <div class="cuadro"><div class="texto"><h1>Electrotecnia</h1></div>
+        <div class="cuadro"><img src="./Electrotecnia/images/elementosCircuito.jpg" ></div>
+        <div class="cuadro"><div class="texto">
+            <h3>Youtube: Profesor Sergio Llanos:</h3>
+             <p><a href="https://www.youtube.com/watch?v=xGfa28dja10">Circuito en Serie</a></p>
+             <p><a href="https://www.youtube.com/watch?v=Aq_N_dosARc">Circuito en Paralelo</a></p>
+             <p><a href="https://www.youtube.com/watch?v=SNjs_SjslFE">Circuito Mixto</a></p>
+             <h3> Resúmenes:</h3>
+             <p><a href="./Electrotecnia/capítulo2.pdf">Capítulo 2</a></p>
+             <p><a href=".Electrotecnia/Capítulo 3.pdf">Capítulo 3</a></p>
+             <p><a href=".Electrotecnia/Capítulo 4.pdf">Capítulo 4</a></p>
+             <h3> Libros:</h3>
+             <p><a href="./Electrotecnia/ElectrotecniaBasica.pdf">Electrotécnia Básica </a></p>
+             <p><a href="./Electrotecnia/PinzonElectrotecniaBasica.pdf">Electrotécnia BásicaPinzon </a></p>
+
+            
+    
+     
+        </div>
+    </div>
+        
+
+
+
    
     <div class="cuadroDialogo" id="cuadroDD">
         <br>
@@ -537,3 +582,4 @@ cuadroDD.style.display="none";
 </body>
 
 </html>
+
