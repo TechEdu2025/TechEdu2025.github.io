@@ -1,1 +1,1 @@
-**Página de uso escolar**
+**Página educativa**
