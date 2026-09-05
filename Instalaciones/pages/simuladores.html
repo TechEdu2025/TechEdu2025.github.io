@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simuladores de Electroneumática y Automatismos</title>
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --primary-hover: #0b5ed7;
+            --bg-card: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --border-color: #e9ecef;
+            --badge-web: #0dcaf0;
+            --badge-pc: #6f42c1;
+            --badge-android: #198754;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .sim-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .sim-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sim-header h2 {
+            font-size: 1.8rem;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .sim-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .sim-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .sim-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .sim-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-top {
+            margin-bottom: 16px;
+        }
+
+        .badge-group {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-web { background-color: #0284c7; }
+        .badge-pc { background-color: var(--badge-pc); }
+        .badge-android { background-color: var(--badge-android); }
+        .badge-free { background-color: #64748b; }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: #0f172a;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 16px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            font-size: 0.88rem;
+            color: #334155;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .note-box {
+            background-color: #f1f5f9;
+            border-left: 3px solid #0284c7;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            color: #334155;
+            margin-bottom: 16px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .btn-download:hover {
+            background-color: var(--primary-hover);
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .sim-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sim-container">
+    <div class="sim-header">
+        <h2>Simuladores de Electroneumática y Automatismos</h2>
+        <p>Herramientas gratuitas multiplataforma para el diseño, simulación y entrega de Trabajos Prácticos</p>
+    </div>
+
+    <div class="sim-grid">
+        <!-- MechSimulator -->
+        <div class="sim-card">
+            <div class="card-top">
+                <div class="badge-group">
+                    <span class="badge badge-web">Web / Online</span>
+                    <span class="badge badge-free">Gratuito</span>
+                </div>
+                <h3 class="card-title">MechSimulator</h3>
+                <p class="card-desc">Simulador online de doble dominio (neumática + mando eléctrico 24V) estilo Festo FluidSIM. No requiere instalación.</p>
+                <ul class="features-list">
+                    <li>Compatible con PC, Celular y Tablet (Browser).</li>
+                    <li>Simbología ISO 1219 / DIN.</li>
+                    <li>Exportación de proyectos en formato editable o enlace/QR.</li>
+                </ul>
+            </div>
+            <div>
+                <a href="https://mechsimulator.com/tools/electro-pneumatic-circuit/" target="_blank" rel="noopener noreferrer" class="btn-download">Usar en el Navegador →</a>
+            </div>
+        </div>
+
+        <!-- CADe SIMU -->
+        <div class="sim-card">
+            <div class="card-top">
+                <div class="badge-group">
+                    <span class="badge badge-pc">PC (Windows)</span>
+                    <span class="badge badge-free">Gratuito</span>
+                </div>
+                <h3 class="card-title">CADe SIMU v4.2</h3>
+                <p class="card-desc">El estándar educativo para simulación de esquemas de mando, potencia electroneumática y programación de PLC.</p>
+                <ul class="features-list">
+                    <li>Software portable sin necesidad de instalación.</li>
+                    <li>Librerías completas de electroneumática y PLC.</li>
+                    <li>Guarda archivos nativos editables (.cad).</li>
+                </ul>
+                <div class="note-box">
+                    <strong>Clave de acceso / Password:</strong> <code>4962</code>
+                </div>
+            </div>
+            <div>
+                <a href="https://cade-simu.com/" target="_blank" rel="noopener noreferrer" class="btn-download">Descargar CADe SIMU →</a>
+            </div>
+        </div>
+
+        <!-- Pneumatic Developer -->
+        <div class="sim-card">
+            <div class="card-top">
+                <div class="badge-group">
+                    <span class="badge badge-android">Android</span>
+                    <span class="badge badge-free">Gratuito</span>
+                </div>
+                <h3 class="card-title">Pneumatic Developer</h3>
+                <p class="card-desc">Aplicación móvil dedicada a la creación y simulación en tiempo real de circuitos neumático-eléctricos y lógica Ladder.</p>
+                <ul class="features-list">
+                    <li>Simulación interactiva de válvulas, actuadores y relés.</li>
+                    <li>Permite guardar y compartir archivos de proyecto editables.</li>
+                    <li>Inclusión de asistente con inteligencia artificial (OLIVER AI).</li>
+                </ul>
+            </div>
+            <div>
+                <a href="https://play.google.com/store/apps/details?id=com.oliveiradeveloper.PneumaticDeveloper" target="_blank" rel="noopener noreferrer" class="btn-download">Descargar en Google Play →</a>
+            </div>
+        </div>
+
+        <!-- Simurelay -->
+        <div class="sim-card">
+            <div class="card-top">
+                <div class="badge-group">
+                    <span class="badge badge-android">Android</span>
+                    <span class="badge badge-free">Gratuito</span>
+                </div>
+                <h3 class="card-title">Simurelay</h3>
+                <p class="card-desc">Especializado en lógica de mando eléctrico, contactores, relés, temporizadores y automatismos industriales.</p>
+                <ul class="features-list">
+                    <li>Ideal para practicar esquemas de control y enclavamientos.</li>
+                    <li>Simulación visual e interactiva en vivo.</li>
+                    <li>Permite guardar diagramas en dispositivos móviles.</li>
+                </ul>
+            </div>
+            <div>
+                <a href="https://play.google.com/store/apps/details?id=com.mordiastudio.simurelayfree" target="_blank" rel="noopener noreferrer" class="btn-download">Descargar en Google Play →</a>
+            </div>
+        </div>
+
+        <!-- PLC Ladder Simulator 2 -->
+        <div class="sim-card">
+            <div class="card-top">
+                <div class="badge-group">
+                    <span class="badge badge-android">Android</span>
+                    <span class="badge badge-free">Gratuito</span>
+                </div>
+                <h3 class="card-title">PLC Ladder Simulator 2</h3>
+                <p class="card-desc">Simulador de programación en diagrama de escalera (Ladder) con entradas/salidas digitales para automatismos.</p>
+                <ul class="features-list">
+                    <li>Diseño e interprete de lógica Ladder móvil.</li>
+                    <li>Temporizadores, contadores y marcas internas.</li>
+                    <li>Exportación de proyectos para evaluación.</li>
+                </ul>
+            </div>
+            <div>
+                <a href="https://play.google.com/store/apps/details?id=com.sergiodanielcastanedanino.plcladdersimulator2" target="_blank" rel="noopener noreferrer" class="btn-download">Descargar en Google Play →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
